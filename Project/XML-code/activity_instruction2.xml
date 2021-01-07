@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--A relative layout created to hold the background picture-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Textview created to place the background colour which matches the image-->
+    <TextView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4D6D19"
+        android:scaleType="center" />
+    <!--This linear layout holds the scrollview-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp">
+        <!--A scrollview is added to fit in more information on the screen
+         by enabling scrolling-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--This linear layout holds the imageview ad the button"instructions"-->
+            <!--Vertically oriented-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Places the imageview on the screen-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/instructioncategories" />
+                <!--Places the "instructions" button on the screen-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#8E6C88"
+                    android:onClick="toinstructions"
+                    android:padding="5dp"
+                    android:text="Instructions"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><!--A relative layout created to hold the background-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Creates a background of preferred colour-->
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#98C1D9"
+        android:scaleType="center" />
+    <!--Linear layout created to hold all the views on the screen-->
+    <!--It is oriented vertically-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Linear layout created to hold the title-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--Places the title on the screen-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Speedy Words"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--This linear layout holds the two cards on the screen-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+            <!--Places the first card pile on the screen-->
+            <ImageView
+                android:id="@+id/cardOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/back" />
+            <!--Places the second card pile on the screen-->
+            <ImageView
+                android:id="@+id/cardTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/categories" />
+        </LinearLayout>
+        <!--Holds the "hint" button and a texview on the screen-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <!--Places the "hint" button on the screen-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8E6C88"
+                android:onClick="hint"
+                android:text="Hint:"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+            <!--Places the textview for showing the category on the screen-->
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Which Category &amp; Letter?"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <!--Holds the "player 1" and "player 2" buttons on the screen-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+            <!--Places the "player 1" button-->
+            <Button
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:background="#8E6C88"
+                android:onClick="player1"
+                android:padding="8dp"
+                android:text="Player 1: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+            <!--Places the "player 2" button-->
+            <Button
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8E6C88"
+                android:onClick="player2"
+                android:padding="8dp"
+                android:text="Player 2: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <!--Holds the "player 3" and "player 4" buttons on the screen-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <!--Places the "player 3" button-->
+            <Button
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:background="#8E6C88"
+                android:onClick="player3"
+                android:padding="8dp"
+                android:text="Player 3: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+            <!--Places the "player 4" button-->
+            <Button
+                android:id="@+id/four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8E6C88"
+                android:onClick="player4"
+                android:padding="8dp"
+                android:text="Player 4: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <!--This linear layout holds the "instruction", "next card" and "reset" buttons-->
+        <!--Horizontally oriented-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <!--Places the "instructions" button on the screen-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:onClick="toinstructions"
+                android:text="Instructions"
+                android:textSize="17sp" />
+            <!--Places the "next card" button on the screen-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:onClick="pop"
+                android:text="Next Card"
+                android:textSize="17sp" />
+            <!--Places the "reset" button on the screen-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="reset"
+                android:text="Reset"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

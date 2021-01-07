@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--A relative layout created to hold the background picture-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Textview created to make the background colour the same as the image in scroolview-->
+    <!--This textview holds all the views-->
+    <TextView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECC9A3"
+        android:scaleType="center" />
+    <!--This linear layout holds the scrollview-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp">
+        <!--A scrollview is added to fit in more information on the screen
+         by enabling scrolling-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--This linear layout holds the background imageview-->
+            <!--vertically oriented-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Places the background image on the screen-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/instructionsteps" />
+                <!--This linear layout holds the subtitle "keeping score" and an image-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Places the subtitle "keeping score" on the screen-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="Keeping Score"
+                        android:textColor="#FF6347"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <!--Places the the image beside the subtitle-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/playericon" />
+                </LinearLayout>
+                <!--Places text on the screen which elaborates on how to keep score-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="To keep track of your score, each player should
+press on their button each time they get a point. The player with the most number of
+points wins!"
+                    android:textColor="#8B6F3F"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <!--This linear layout holds two buttons: "categories" and "To Game"-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+                    <!--Places the "categories" button-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="18dp"
+                        android:background="#8E6C88"
+                        android:onClick="viewCategories"
+                        android:padding="5dp"
+                        android:text="Categories"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <!--Places the "ToGame" button-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#8E6C88"
+                        android:onClick="togame"
+                        android:padding="5dp"
+                        android:text="To Game"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
